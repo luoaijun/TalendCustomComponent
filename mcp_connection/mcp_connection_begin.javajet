@@ -1,0 +1,39 @@
+<%@ jet 
+	imports="
+		org.talend.core.model.process.INode 
+		org.talend.core.model.process.ElementParameterParser 
+		org.talend.core.model.metadata.IMetadataTable 
+		org.talend.core.model.metadata.IMetadataColumn 
+		org.talend.core.model.process.IConnection
+		org.talend.core.model.process.IConnectionCategory
+		org.talend.designer.codegen.config.CodeGeneratorArgument
+		org.talend.core.model.metadata.types.JavaTypesManager
+		org.talend.core.model.metadata.types.JavaType
+		java.util.List 
+    	java.util.Map		
+	" 
+%>
+<% 
+    CodeGeneratorArgument codeGenArgument = (CodeGeneratorArgument) argument;
+    INode node = (INode)codeGenArgument.getArgument();
+    String cid = node.getUniqueName();	
+    String tableMappingName  = ElementParameterParser.getValue(node, " __TABLEMAPPINGNAME__");
+	String db_name = ElementParameterParser.getValue(node, " __DB_NAME__");
+	String db_port  = ElementParameterParser.getValue(node, " __DB_PORT__");
+	String db_collection  = ElementParameterParser.getValue(node, " __DB_COL__");
+	String tokenID  = ElementParameterParser.getValue(node, " __TOKENID__");
+	String recodeCode  = ElementParameterParser.getValue(node, " __RECORDCODE__");
+	String country  = ElementParameterParser.getValue(node, " __COUNTRY__");
+	String url_host  = ElementParameterParser.getValue(node, " __URL_HOST__");
+	String db_host  = ElementParameterParser.getValue(node, " __DB_HOST__");
+	String mongo_query  = ElementParameterParser.getValue(node, " __MONGO_QUERY__");
+	
+%>
+	System.out.println("begin --------------"); 
+
+
+	String[] params = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>};
+	if(!params[0].isEmpty()){
+	System.out.println(<%=url_host %>+"\t test");
+	com.servier.Graph.run(params);
+	}
