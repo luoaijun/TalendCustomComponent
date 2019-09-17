@@ -12,4 +12,5 @@
 - db_host = "localhost";
 - mongo_query = "{sheetName:'Organization'}";
 
-![运行](resources/images/img.PNG? "连续不可重复序列")
+![运行](resources/images/img.PNG? "参数")
+![效果](resources/images/img2.PNG? "效果")
