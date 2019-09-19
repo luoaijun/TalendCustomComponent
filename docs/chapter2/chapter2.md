@@ -1,6 +1,7 @@
 ## mcp_connection
 
-> 自定以组件使用请参考：QuickStart
+> 自定以组件使用请参考：[QuickStart]( https://luoaijun.github.io/com.cdes.custom.talend/#/chapter3/chapter3)
+
 ### 参数：
 - tableMappingName = "Organization"; tableMappingName
 - db_name = "DEEPSEA"; mongo connection
