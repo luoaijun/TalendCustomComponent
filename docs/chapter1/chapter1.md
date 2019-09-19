@@ -1,6 +1,6 @@
 ## 1. tNormailzaAll
 
-> 自定以组件使用请参考：[QuickStart](../chapter3/chapter3.md)
+> 自定以组件使用请参考：[QuickStart](chapter3/chapter3.md)
  
 ```
 将字符串按指定字符解析成多行数据

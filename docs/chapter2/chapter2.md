@@ -1,6 +1,6 @@
 ## mcp_connection
 
-> 自定以组件使用请参考：[QuickStart](../chapter3/chapter3.md)
+> 自定以组件使用请参考：[QuickStart](chapter3/chapter3.md)
  
 ### 参数：
 - tableMappingName = "Organization"; tableMappingName
