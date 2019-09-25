@@ -27,13 +27,21 @@
 	String url_host  = ElementParameterParser.getValue(node, " __URL_HOST__");
 	String db_host  = ElementParameterParser.getValue(node, " __DB_HOST__");
 	String mongo_query  = ElementParameterParser.getValue(node, " __MONGO_QUERY__");
+	String data  = ElementParameterParser.getValue(node, " __DATA__");
 	
-%>
-	System.out.println("begin --------------"); 
-
-
-	String[] params = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>};
-	if(!params[0].isEmpty()){
-	System.out.println(<%=url_host %>+"\t test");
-	com.servier.Graph.run(params);
+%>   
+    if(<%=data%>.length()>0){
+	    String[] args = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>};
+		if(!args[0].isEmpty()){
+			System.out.println(<%=url_host %>+"\t test");
+			com.servier.Graph.run(args,<%=data%>);
+		}
+	}else{
+		String[] params = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>};
+		if(!params[0].isEmpty()){
+			System.out.println(<%=url_host %>+"\t test");
+			com.servier.Graph.run(params,null);
+		}
 	}
+    
+

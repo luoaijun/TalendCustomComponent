@@ -1,8 +1,32 @@
 ## mcp_connection
 
 > 自定以组件使用请参考：[QuickStart](chapter3/chapter3.md)
- 
-### 参数：
+
+### how to use mcp ?
+#### Get mcp Jar
+- Install from the command line:
+
+```
+maven install com.servier.mcp
+```
+- Eidt in maven pom
+```
+        <dependency>
+            <groupId>com.servier</groupId>
+            <artifactId>mcp</artifactId>
+            <version>1.2</version>
+        </dependency>
+```
+#### Run graph
+
+- param: 配置参数
+- data：数据，如果data为空，则mcp将从mongo直接获取数据
+```
+com.servier.Graph.run(params,data)
+```
+
+
+### params参数：
 - tableMappingName = "Organization"; tableMappingName
 - db_name = "DEEPSEA"; mongo connection
 - db_port = "27017";mongo 端口
