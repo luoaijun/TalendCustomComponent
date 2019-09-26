@@ -4,19 +4,24 @@
 
 ### how to use mcp ?
 #### Get mcp Jar
-- Install from the command line:
+
+- Install 
 
 ```
 maven install com.servier.mcp
 ```
-- Eidt in maven pom
+
+
+- pom 
+
 ```
-        <dependency>
-            <groupId>com.servier</groupId>
-            <artifactId>mcp</artifactId>
-            <version>1.2</version>
-        </dependency>
+<dependency>
+    <groupId>com.servier</groupId>
+    <artifactId>mcp</artifactId>
+    <version>1.2</version>
+</dependency>
 ```
+
 #### Run graph
 
 - param: 配置参数
