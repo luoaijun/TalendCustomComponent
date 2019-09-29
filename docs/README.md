@@ -1,4 +1,4 @@
-#  com.cdes.luoaijun
+#  luoaijun
 
 > 自定义talend 组件
 
