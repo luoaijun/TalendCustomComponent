@@ -8,7 +8,7 @@
 - Install 
 
 ```
-maven install com.servier.mcp
+mvn install com.luoaijun.mcp
 ```
 
 
@@ -16,7 +16,7 @@ maven install com.servier.mcp
 
 ```
 <dependency>
-    <groupId>com.servier</groupId>
+    <groupId>com.luoaijun</groupId>
     <artifactId>mcp</artifactId>
     <version>1.2</version>
 </dependency>
