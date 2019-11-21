@@ -1,19 +1,34 @@
-## mcp_connection
+## AiPool-GDC
 
 > 自定以组件使用请参考：[QuickStart](chapter3/chapter3.md)
 
-### how to use mcp ?
-#### Get mcp Jar
+```
+来自公司项目MCP CLOUDER
+```
+
+- 设计模式
+- 功能介绍
+- 应用场景
+- 错误提示与解决建议
+
+### 引用
+
+#### Technology-package
+
+> [Push Your JAR to maven center](https://luoaijun.github.io/note-book/#/chapter4/chapter4)
+
+##### Repository：mcp 
+1. [mcp quick-start](https://luoaijun.github.io/com.cdes.custom.talend/#/chapter2/chapter2)
+2. [source code](https://github.com/luoaijun/MCPUtils)
+
 
 - Install 
-
 ```
 mvn install com.luoaijun.mcp
 ```
 
 
 - pom 
-
 ```
 <dependency>
     <groupId>com.luoaijun</groupId>
@@ -21,14 +36,7 @@ mvn install com.luoaijun.mcp
     <version>1.2</version>
 </dependency>
 ```
-
-#### Run graph
-
-- param: 配置参数
-- data：数据，如果data为空，则mcp将从mongo直接获取数据
-```
-com.servier.Graph.run(params,data)
-```
+- [download jar](https://repo1.maven.org/maven2/com/luoaijun/mcp/mcp/1.2/mcp-1.2.jar) 
 
 
 ### params参数：

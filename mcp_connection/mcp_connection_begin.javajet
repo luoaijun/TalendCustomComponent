@@ -28,20 +28,18 @@
 	String db_host  = ElementParameterParser.getValue(node, " __DB_HOST__");
 	String mongo_query  = ElementParameterParser.getValue(node, " __MONGO_QUERY__");
 	String data  = ElementParameterParser.getValue(node, " __DATA__");
+	String batch  = ElementParameterParser.getValue(node, " __BATCH__");
+	String deepsea_url  = ElementParameterParser.getValue(node, " __DEEPSEA_URL__");
+	String deepsea_token  = ElementParameterParser.getValue(node, " __DEEPSEA_TOKEN__");
+	String deepsea_collection  = ElementParameterParser.getValue(node, " __DEEPSEA_COLLECTION__");
+	String deepsea_collection_filename  = ElementParameterParser.getValue(node, " __DEEPSEA_COLLECTION_FILENAME__");
+	String data_block  = ElementParameterParser.getValue(node, " __DATA_BLOCK__");
+	String thread_num  = ElementParameterParser.getValue(node, " __THREADNUM__");
+	String log  = ElementParameterParser.getValue(node, " __LOG_PATH__");
+	String tag  = ElementParameterParser.getValue(node, " __TAG__");
 	
-%>   
-    if(<%=data%>.length()>0){
-	    String[] args = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>};
-		if(!args[0].isEmpty()){
-			System.out.println(<%=url_host %>+"\t test");
-			com.servier.Graph.run(args,<%=data%>);
-		}
-	}else{
-		String[] params = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>};
-		if(!params[0].isEmpty()){
-			System.out.println(<%=url_host %>+"\t test");
-			com.servier.Graph.run(params,null);
-		}
-	}
-    
 
+%>    
+	String[] args = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>,<%=batch %>,<%=deepsea_url %>,<%=deepsea_token %>,<%=deepsea_collection %>,<%=deepsea_collection_filename %>,<%=data_block %>,<%=thread_num %>,<%=log %>,<%=tag %>};
+	com.servier.Graph graph = new com.servier.Graph(args,<%=data %>); 
+    graph.entry();
