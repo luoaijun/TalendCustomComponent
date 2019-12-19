@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/work/tool/telend/TOS_BD-20180116_1512-V6.5.1/plugins/org.talend.core.runtime_6.5.1.20180116_1512.jar"/>
-	<classpathentry kind="lib" path="C:/work/tool/telend/TOS_BD-20180116_1512-V6.5.1/plugins/org.talend.metadata.managment_6.5.1.20180116_1512.jar"/>
-	<classpathentry kind="lib" path="C:/work/tool/telend/TOS_BD-20180116_1512-V6.5.1/plugins/org.talend.core_6.5.1.20180116_1512.jar"/>
-	<classpathentry kind="lib" path="C:/work/tool/telend/TOS_BD-20180116_1512-V6.5.1/plugins/org.talend.designer.codegen_6.5.1.20180116_1512/"/>
-	<classpathentry kind="output" path=""/>
-</classpath>
