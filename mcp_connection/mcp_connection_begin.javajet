@@ -37,9 +37,13 @@
 	String thread_num  = ElementParameterParser.getValue(node, " __THREADNUM__");
 	String log  = ElementParameterParser.getValue(node, " __LOG_PATH__");
 	String tag  = ElementParameterParser.getValue(node, " __TAG__");
+	String proxy_host  = ElementParameterParser.getValue(node, " __PROXY_HOST__");
+	String proxy_port  = ElementParameterParser.getValue(node, " __PROXY_PORT__");
+	
 	
 
-%>    
-	String[] args = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>,<%=batch %>,<%=deepsea_url %>,<%=deepsea_token %>,<%=deepsea_collection %>,<%=deepsea_collection_filename %>,<%=data_block %>,<%=thread_num %>,<%=log %>,<%=tag %>};
+%>     
+    
+	String[] args = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,<%=db_name %>,<%=db_collection %>,<%=db_port %>,<%=db_host %>,<%=mongo_query %>,<%=batch %>,<%=deepsea_url %>,<%=deepsea_token %>,<%=deepsea_collection %>,<%=deepsea_collection_filename %>,<%=data_block %>,<%=thread_num %>,<%=log %>,<%=tag %>,<%=proxy_host %>,<%=proxy_port %>};
 	com.servier.Graph graph = new com.servier.Graph(args,<%=data %>); 
     graph.entry();
