@@ -1,0 +1,43 @@
+<%@ jet 
+	imports="
+		org.talend.core.model.process.INode 
+		org.talend.core.model.process.ElementParameterParser 
+		org.talend.core.model.metadata.IMetadataTable 
+		org.talend.core.model.metadata.IMetadataColumn 
+		org.talend.core.model.process.IConnection
+		org.talend.core.model.process.IConnectionCategory
+		org.talend.designer.codegen.config.CodeGeneratorArgument
+		org.talend.core.model.metadata.types.JavaTypesManager
+		org.talend.core.model.metadata.types.JavaType
+		java.util.List 
+    	java.util.Map		
+	" 
+%>
+<% 
+    CodeGeneratorArgument codeGenArgument = (CodeGeneratorArgument) argument;
+    INode node = (INode)codeGenArgument.getArgument();
+    String cid = node.getUniqueName();	
+    String tableMappingName  = ElementParameterParser.getValue(node, " __TABLEMAPPINGNAME__");
+	String tokenID  = ElementParameterParser.getValue(node, " __TOKENID__");
+	String recodeCode  = ElementParameterParser.getValue(node, " __RECORDCODE__");
+	String country  = ElementParameterParser.getValue(node, " __COUNTRY__");
+	String url_host  = ElementParameterParser.getValue(node, " __URL_HOST__");
+	String batch  = ElementParameterParser.getValue(node, " __BATCH__");
+	String deepsea_url  = ElementParameterParser.getValue(node, " __DEEPSEA_URL__");
+	String deepsea_token  = ElementParameterParser.getValue(node, " __DEEPSEA_TOKEN__");
+	String deepsea_collection  = ElementParameterParser.getValue(node, " __DEEPSEA_COLLECTION__");
+	String deepsea_collection_filename  = ElementParameterParser.getValue(node, " __DEEPSEA_COLLECTION_FILENAME__");
+	String data_block  = ElementParameterParser.getValue(node, " __DATA_BLOCK__");
+	String thread_num  = ElementParameterParser.getValue(node, " __THREADNUM__");
+	String log  = ElementParameterParser.getValue(node, " __LOG_PATH__");
+	String tag  = ElementParameterParser.getValue(node, " __TAG__");
+	String proxy_host  = ElementParameterParser.getValue(node, " __PROXY_HOST__");
+	String proxy_port  = ElementParameterParser.getValue(node, " __PROXY_PORT__");
+	
+	
+
+%>     
+    
+	String[] args = {<%=url_host %>,<%=country %>,<%=tokenID %>,<%=tableMappingName %>,<%=recodeCode %>,"","","","","",<%=batch %>,<%=deepsea_url %>,<%=deepsea_token %>,<%=deepsea_collection %>,<%=deepsea_collection_filename %>,<%=data_block %>,<%=thread_num %>,<%=log %>,<%=tag %>,<%=proxy_host %>,<%=proxy_port %>};
+	com.servier.Graph graph = new com.servier.Graph(args,""); 
+    graph.entry();
